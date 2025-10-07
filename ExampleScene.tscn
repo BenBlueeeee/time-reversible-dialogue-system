@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3 uid="uid://cjbo1xt0eod5w"]
+
+[ext_resource type="Script" uid="uid://bmq3wis3v0d1v" path="res://useful_scripts/FreeCam.cs" id="1_51a3m"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_51a3m"]
+sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+
+[sub_resource type="Sky" id="Sky_xbdhx"]
+sky_material = SubResource("ProceduralSkyMaterial_51a3m")
+
+[sub_resource type="Environment" id="Environment_kelfb"]
+background_mode = 2
+sky = SubResource("Sky_xbdhx")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_s2k4k"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_51a3m"]
+size = Vector2(10, 10)
+
+[node name="ExampleScene" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_kelfb")
+
+[node name="Box1" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.85467, 0.769346, 0)
+mesh = SubResource("BoxMesh_s2k4k")
+
+[node name="Box2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.47107, 0.769346, 0)
+mesh = SubResource("BoxMesh_s2k4k")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.822661, -0.223493, 0.522761, 0, 0.919493, 0.393106, -0.568532, -0.323393, 0.756432, 3.31949, 2.49619, 4.80329)
+script = ExtResource("1_51a3m")
+
+[node name="Floor" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_51a3m")

@@ -3,7 +3,7 @@
     "tasks": [
         {
             "label": "build",
-            "type": "process",     // <- change from "dotnet" to "process"
+            "type": "process",
             "command": "dotnet",
             "args": ["build"],
             "problemMatcher": "$msCompile",

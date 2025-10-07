@@ -1,6 +1,7 @@
 using Godot;
 
-namespace ai;
+// required inputs are
+// left, right, backward, forward, sprint_toggle
 
 public partial class FreeCam : Camera3D
 {
