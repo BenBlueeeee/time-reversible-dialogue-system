@@ -1,0 +1,23 @@
+2 methods i can currently think of / have found so far
+
+either use subviewports and textures
+or unproject the desired positions of the control nodes (e.g. the label) from 3d into 2d
+
+idk which would be more performant
+
+might wanna make the dialogue bubble texture expandable (like that tutorial did with the menu things): so that it expands to be whatever size needed by the label and infills itself whilst moving the borders outwards
+
+
+
+
+
+
+
+
+
+
+need a global variable / ref to a timedirection enum or whatever etc
+
+player dialogue options / forking
+
+just make something as simple as poss for now; niceties (like adding variables to speech or executing dialogue-option dependent code) don't have to be done for a little while 
