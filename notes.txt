@@ -8,7 +8,7 @@ idk which would be more performant
 might wanna make the dialogue bubble texture expandable (like that tutorial did with the menu things): so that it expands to be whatever size needed by the label and infills itself whilst moving the borders outwards
 
 
-
+might wanna remove leading and trailing whitespace in each line
 
 
 

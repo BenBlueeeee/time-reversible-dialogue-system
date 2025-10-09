@@ -1,0 +1,12 @@
+here's some space for comments or anything else you'd like
+
+START
+-this is some dialogue
+--this is option 1 from 1 (or, backwards in time, from 2)
+--this is option 2 from 1 (or, backwards in time, from 2)
+-this is the continuation from the linear dialogue
+--press this option (1) to end the dialogue early option 1
+---END
+--press this option (2) to not end the dialogue early
+-this is more continutation from the linear dialogue
+END

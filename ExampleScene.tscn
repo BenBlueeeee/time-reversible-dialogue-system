@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://cjbo1xt0eod5w"]
+[gd_scene load_steps=10 format=3 uid="uid://cjbo1xt0eod5w"]
 
 [ext_resource type="Script" uid="uid://bmq3wis3v0d1v" path="res://useful_scripts/FreeCam.cs" id="1_51a3m"]
+[ext_resource type="Script" uid="uid://ien6a01g4630" path="res://time-reversible-dialogue-system-internal/DialogueBubble.cs" id="1_kelfb"]
 [ext_resource type="PackedScene" uid="uid://cdaydvxhi0n26" path="res://time-reversible-dialogue-system-internal/DialogueBubble.tscn" id="1_xbdhx"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_51a3m"]
@@ -37,8 +38,10 @@ environment = SubResource("Environment_kelfb")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.85467, 0.769346, 0)
 mesh = SubResource("BoxMesh_s2k4k")
 
-[node name="DialogueBubble" type="Node3D" parent="Box1"]
+[node name="DialogueBubble" type="Node3D" parent="Box1" node_paths=PackedStringArray("label")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.163588, 1.10835, 0)
+script = ExtResource("1_kelfb")
+label = NodePath("SubViewport/DialogueBubble/Label")
 
 [node name="Sprite3D" type="Sprite3D" parent="Box1/DialogueBubble"]
 texture_filter = 0
@@ -62,3 +65,5 @@ script = ExtResource("1_51a3m")
 
 [node name="Floor" type="MeshInstance3D" parent="."]
 mesh = SubResource("PlaneMesh_51a3m")
+
+[editable path="Box1/DialogueBubble/SubViewport/DialogueBubble"]

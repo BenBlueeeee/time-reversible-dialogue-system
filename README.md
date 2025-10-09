@@ -4,6 +4,12 @@ a dialogue system that can be run both forwards and backwards in time
 
 This is designed exclusively for use within the inversion project (and may indeed be coupled with its code in some places, although ideally not). This code is not designed to be useful as a general dialogue system, although it may be adaptable and useful for other projects with some work.
 
+# .dialogue File conventions / structure
+
+- line 0 is the line that says "START"
+- END will end the dialogue at any point in the speech (this implies that the last line of the document should be an "END": if this is not the case then the program will append "END" as the last line before doing anything else)
+- 
+
 # Conventions
 
 ## Commit Types

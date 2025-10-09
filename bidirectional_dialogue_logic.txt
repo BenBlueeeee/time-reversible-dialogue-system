@@ -1,0 +1,19 @@
+prolly want a visualiser for this
+
+choose options forward and options backwards
+
+
+
+
+
+
+
+space for random comments
+
+START
+
+-this is some dialogue
+--this is option 1 from 1
+--this is option 2 from 1
+-this is the continuation from the linear dialogue
+-this is more continutation from the linear dialogue
